@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Final_version</string>
+    <string name="user_name">UserName</string>
+    <string name="password">Password</string>
+    <string name="sing_in">Sing In</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="post_title">Post Title</string>
+    <string name="description">Post Description</string>
+</resources>

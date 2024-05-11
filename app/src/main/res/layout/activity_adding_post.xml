@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddingPostActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_back_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#4267B2"
+            android:onClick="back"
+            android:text="Back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Adding Post"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_back_add"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/addPic_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constraintLayout2"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/upload_imageView"
+            android:layout_width="300sp"
+            android:layout_height="300sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="55dp"
+            android:alpha="0.2"
+            app:srcCompat="@drawable/defaultpic" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/upload_selectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upload_imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10sp"
+            android:text="Select"
+            app:backgroundTint="#4267B2" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/addText_Post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addPic_post"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/postTitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Title: " />
+
+        <EditText
+            android:id="@+id/postTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/post_title"
+            android:ems="10"
+            android:hint="@string/post_title"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/postTitle_text" />
+
+        <TextView
+            android:id="@+id/postDescription_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Description:" />
+
+        <EditText
+            android:id="@+id/postDescription"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="Description"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/description"
+            android:inputType="textMultiLine" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/upload_materialbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upload_selectImage"
+            android:layout_centerHorizontal="true"
+            android:enabled="false"
+            android:text="Publish Post" />
+
+    </LinearLayout>
+
+</RelativeLayout>
